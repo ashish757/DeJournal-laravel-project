@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .heading {
+        @apply text-gray-700 text-5xl font-bold tracking-wide my-10 text-center;
+    }
+    .nav-signin-btn {
+        @apply text-gray-800 px-4 py-2 rounded bg-gray-200 font-semibold;
+    }
+    .signin-form, .signup-form {
+        @apply max-w-md mx-auto;
+        .input-div {
+            @apply border-2 border-gray-500 flex;
+            .input-icon {
+                @apply grid place-content-center border-r-2 border-gray-600 px-5 bg-gray-400;
+            }
+            .input {
+                @apply px-4 py-3 w-full bg-gray-50 outline-none focus:bg-gray-200;
+            }
+            &.error {
+                @apply border-red-700;
+                .input-icon {
+                    @apply border-red-700 bg-red-400 text-red-900;
+                }
+                .input {
+                    @apply bg-red-50 focus:bg-red-200 text-red-500 placeholder:text-red-500;
+                }
+            }
+        }
+        .button {
+            @apply w-full py-3 font-bold tracking-wide border-2 border-gray-500 text-gray-600 bg-gray-100 hover:bg-gray-700 hover:text-gray-100 transition-colors;
+        }
+    }
+    
+  }
