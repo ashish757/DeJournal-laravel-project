@@ -15,10 +15,18 @@ class UserSignup extends Controller
         $user->email = $req->email;
         $user->password = $req->password;
         $user->save();
-        return redirect("/signup/auth/username");
+        $req->session()->put("id", $user->id);
+
+        $username = strstr($req->email, '@', true).$req->name;
+        return redirect("/signup/auth/username", ["username" => $username]);
     }
-    public function username() {
+    public function username(Request $req) {
+        $req->validate(['username' => 'required|unique:users']);
         
-        return view("username");
+        $username = $req->username;
+        $id = $req->session("id");
+        $user = User::find($id);
+        $user->username = $username;
+        return redirect("/dashboard/profile");
     }
 }
