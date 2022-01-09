@@ -26,8 +26,12 @@
                 <textarea class="p-2 text-gray-500 bg-gray-100 border-2 focus:border-gray-400 focus:outline-none focus:bg-transparent rounded w-full" name="subTitle" cols="30" rows="3" placeholder="Sub Title...."></textarea>
             </div>
             <div class="m-4">
+                <textarea class="p-2 text-gray-500 bg-gray-100 border-2 focus:border-gray-400 focus:outline-none focus:bg-transparent rounded w-full" name="description" cols="30" rows="1" placeholder="tags...."></textarea>
+            </div>
+            <div class="m-4">
                 <textarea class="integrateTinyMCE p-2 text-gray-500 bg-gray-100 border-2 focus:border-gray-400 focus:outline-none focus:bg-transparent rounded w-full" name="description" cols="30" rows="10" placeholder="Post...."></textarea>
             </div>
+
 
             <button type="submit" class="ml-4 p-2 px-4 rounded font-semibold bg-green-500 hover:bg-green-600">Save</button>
         </form>
