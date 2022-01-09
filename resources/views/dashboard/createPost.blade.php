@@ -31,8 +31,6 @@
 
             <button type="submit" class="ml-4 p-2 px-4 rounded font-semibold bg-green-500 hover:bg-green-600">Save</button>
         </form>
-
-
             </div>
         </div>
 
