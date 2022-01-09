@@ -38,11 +38,12 @@
                             <div class="font-bold flex items-center gap-8 mt-1">
                                 <a class="bg-indigo-500 py-1 px-2 rounded text-white text-md font-semibold" href="profile/edit">Edit Profile</a>
                                 <div>Followers 456</div>
-                                <div>Following 673</div>
+                                <div>following 768</div>
                             </div>
                             <div class="mt-4">
 
-                                <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">{{$user["name"]}}</h1>
+                                <h1 class="text-gray-900 font-bold text-xl leading-8 mt-1">{{$user["name"]}}</h1>
+                                <p class="text-gray-700 text-sm">{{'@'}}{{$user->username}}</p>
                                 @if ($user["status"])
                                     <h3 class="text-gray-700 font-lg font-semibold leading-6">
                                         {{ $user["status"]}}

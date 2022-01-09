@@ -31,9 +31,10 @@ class DashboardProfileController extends Controller
             $user->avatar = $path;
         }
         
-        $user->name = $req->input()["name"];
-        $user->status = $req->input()["status"];
-        $user->bio = $req->input()["bio"];
+        $user->username = $req->username;
+        $user->name = $req->name;
+        $user->status = $req->status;
+        $user->bio = $req->bio;
         $user->update();
 
         $req->session()->flash("msg", "Profile was Updated");

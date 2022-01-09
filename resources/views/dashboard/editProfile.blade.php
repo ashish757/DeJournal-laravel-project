@@ -33,6 +33,10 @@
                         <input type="file" name="avatar" placeholder="Select your Avatar">
                     </div>
 
+                    <label class="text-right text-gray-600 font-semibold">Username</label>
+                    <input class="border border-gray-400 text-gray-700 font-semibold py-2 px-4 w-full max-w-md"
+                        type="text" value="{{$user['username']}}" name="username">
+
                     <label class="text-right text-gray-600 font-semibold">Name</label>
                     <input class="border border-gray-400 text-gray-700 font-semibold py-2 px-4 w-full max-w-md"
                         type="text" value="{{$user['name']}}" name="name">
