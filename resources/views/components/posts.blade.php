@@ -9,9 +9,15 @@
                 <h1 class="font-bold text-2xl">{{$post["title"]}}</h1>
                 <p class="text-gray-500">{{$post["subTitle"]}}</p>
             </a>
-            <div>
-                <div class="inline-block text-gray-500 pl-0 p-2">{{$post["created_at"]}}</div>
+            <div class="flex items-center gap-4 mt-2">
+                <div class="text-gray-500">{{ date('d M Y', strtotime($post->created_at))}}</div>
+                @if ($post->tags != "")
+                    @foreach(explode(',', $post->tags) as $tag) 
+                        <div class="text-gray-500 px-4 rounded-full py-[.1rem] bg-gray-200 border-2 border-gray-300 grid place-content-center">{{$tag}}</div>
+                    @endforeach
+                @endif
             </div>
+
         </div>
         <div class="">
             <img class="w-full min-h-full object-cover min-w-[16rem]" src="{{asset('storage/'.$post['image'])}}">

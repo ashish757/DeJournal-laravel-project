@@ -15,14 +15,14 @@
             </a>
             <button class='text-sm bg-green-300 rounded-3xl text-green-700 font-semibold px-3 py-1'>Follow</button>
         </div>
-        <div class="font-semibold text-green-500 ">{{$post["created_at"]}}</div>
+        <div class="font-semibold text-green-500 ">{{ date('d-m-Y H:i A', strtotime($post->created_at))}}</div>
     </div>
     <div class="">
         <img class="w-full object-cover" src="{{asset('storage/'.$post['image'])}}">
     </div>
 
     <article class='mt-10 text-2xl text-gray-900'>
-        {{$post->description}}
+        {!! $post->description !!}
     </article>
 
 

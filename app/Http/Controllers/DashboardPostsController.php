@@ -27,6 +27,7 @@ class DashboardPostsController extends Controller
         }
 
         $post->title = $req->title;
+        $post->tags = $req->tags;
         $post->subTitle = $req->subTitle;
         $post->description = $req->description;
         $post->postedBy = $req->session()->get("id");
@@ -49,6 +50,7 @@ class DashboardPostsController extends Controller
             $post->image = $path;
         }
         $post->title = $req->title;
+        $post->tags = $req->tags;
         $post->subTitle = $req->subTitle;
         $post->description = $req->description;
         $post->update();
