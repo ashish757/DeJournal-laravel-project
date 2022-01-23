@@ -1,5 +1,5 @@
-<x-Header title="Home - Laravel Web App"/>
-<x-navbar/>
+<x-Header title="DeJournal."/>
+<x-navbar active="home"/>
 
     <h1 class="heading text-center">DeJournal.</h1>
 

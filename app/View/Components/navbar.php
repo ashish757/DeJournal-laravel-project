@@ -11,9 +11,10 @@ class navbar extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $active;
+    public function __construct($active)
     {
-        //
+        $this->active = $active;
     }
 
     /**

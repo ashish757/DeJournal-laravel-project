@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UserSignin;
 use App\Http\Controllers\UserSignup;
 use App\Http\Middleware\NoAccessLoggedIn;
@@ -47,6 +48,8 @@ Route::view('/signup/auth/username',"username");
 Route::post('/signup/auth/username', [UserSignup::class, "username"]);
 
 Route::get('/writer/{username}', [ProfileController::class, "index"]);
+
+Route::get('/search/{scope}/{query}', [SearchController::class, "search"]);
 
 
 
